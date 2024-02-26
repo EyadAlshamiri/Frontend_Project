@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Ubuntu:ital,wght@0,700;1,500&display=swap') ;
+
+* {
+   padding: 0; 
+   margin: 0;
+   font-family: "Cairo" , sans-serif ;  
+   box-sizing: border-box; 
+   scroll-behavior: smooth;
+}
+
+:root {
+   --bg-color : #081b29 ; 
+   --second-bg-color : #112e42 ; 
+   --text-color: #ededed; 
+   --main-color:#00abf0 ; 
+}
+
+header {
+   display: flex; 
+   background-color: var(--bg-color);
+   width: 100% ;
+   position: fixed ;
+   z-index: 100 ;
+   justify-content: space-between;
+   padding: 10px  150px;
+   align-items: center;
+}
+
+.logo {
+   color: var(--text-color); 
+   text-decoration: none ;
+   font-size: 22px;
+   font-weight: bold;
+   transition: .5s ease;
+}
+
+.logo:hover {
+   transform: scale(1.2);
+   color: var(--main-color) ;
+}
+
+
+nav a { 
+   color : var(--text-color); 
+   text-decoration: none; 
+   font-weight: 600;
+   font-size: 18px; 
+   padding-left: 20px;
+}
+
+nav a:hover{
+   color: var(--main-color);
+   font-weight: 900;
+}
+
+.content {
+   width: 100%; 
+   height: 100vh;
+   display: flex; 
+   align-items: center;
+   background-image: url('../img/AI.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+section {
+   padding: 100px 150px;
+}
+
+.content h2 { 
+   color : var(--text-color);
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.content h2 span {
+   color:red;
+}
+
+.content h3 {
+   color: var(--text-color); 
+   font-size: 50px;
+   font-weight: bold;
+}
+
+.Contact-me {
+   display: inline-block;
+   text-decoration: none; 
+   color: var(--bg-color);
+   background-color: var(--main-color);
+   border: 3px solid var(--main-color); 
+   border-radius: 10px;
+   padding: 5px 15px;
+   font-weight: 600;
+   margin-bottom: 30px;
+   transition: 0.5s ease ;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.Contact-me:hover {
+   transform: scale(1.1);
+   color: var(--main-color);
+}
+
+.Contact-me::before {
+   content: '' ;
+   position: absolute;
+   top: 0; 
+   left: 0; 
+   width: 0%; 
+   height: 100%; 
+   background: var(--bg-color);
+   z-index: -1; 
+   transition: 0.5s ease;
+}
+
+.Contact-me:hover::before {
+   width: 100%;
+}
+
+
+.social a {
+   text-decoration: none;
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 60px;
+   height: 60px;
+   background: transparent;
+   border: 3px solid var(--main-color);
+   border-radius: 50%;
+   font-size: 30px;
+   color: var(--main-color);
+   z-index: 1;
+   overflow: hidden;
+   transition: .5s;
+   margin: 20px 30px;
+}
+
+.social a:hover {
+   color: var(--bg-color);
+}
+
+.social a::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0%;
+   height: 100%;
+   background:var(--main-color);
+   z-index: -1;
+   transition: .5s;
+} 
+.social a:hover:before {
+   width: 100%;
+
+}
+
+
+.my-skills{
+   text-align: center; 
+   background-color:var(--bg-color);
+}
+
+.my-skills h2 {
+   color:var(--main-color); 
+   font-size: 35px;
+}
+
+.my-skills p {
+   color: var(--text-color);
+   font-size: 22px;
+   margin-bottom: 35px; 
+}
+
+.my-skills span {
+   color: var(--main-color);
+}
+
+.skills {
+   display: flex; 
+}
+
+.box {
+   position: relative;
+   background-color: var(--bg-color);
+   padding: 20px;
+   margin: 10px;
+   border-radius: 10px;
+   border: 2px solid var(--main-color);
+   cursor: pointer;
+   transition: all 0.5s ease;
+   overflow: hidden;
+}
+
+.box:hover{
+   border-radius: 5px;
+   box-shadow: 0 5px 5px var(--main-color); 
+   transform: scale(1.1);
+}
+
+.box::before {
+   content: ''; 
+   position: absolute;
+   top: 0 ; 
+   left: 0; 
+   width: 0; 
+   height: 100%; 
+   background: var(--second-bg-color); 
+   z-index: -1;
+   transition: .5s ease; 
+}
+
+.box:hover::before {
+   width: 100%;
+}
+
+.box h3 {
+   color: var(--main-color);
+   font-size: 30px; 
+}
+
+.icon {
+   color: var(--text-color) ; 
+   font-size: 40px;
+}
+
+.portfolio {
+   text-align: center;
+   background-color: var(--second-bg-color);
+}
+
+.portfolio h2 {
+   color: var(--main-color); 
+   font-size: 35px;
+}
+
+.portfolio p {
+   color: var(--text-color);
+   font-size: 22px;
+   margin-bottom: 35px;
+}
+
+
+.photos {
+   display: flex;
+}
+
+.photo {
+   margin: 20px ;
+}
+
+.photos img {
+   width: 20rem;
+   transition: all .5s ease;
+   border: 3px solid var(--main-color);
+}
+
+.photo .img3 { 
+   height: 80%;
+}
+
+.photo img:hover {
+   transform: scale(1.5); 
+   height: auto;
+}
+
+.contact-us {
+   background-color:var(--bg-color);
+   text-align: center; 
+}
+.contact-us h2 {
+   color: var(--main-color); 
+   font-size: 35px;
+}
+
+.contact-us p {
+   color: var(--text-color);
+   font-size: 22px;
+   margin-bottom: 35px;
+}
+
+.contact-area {
+   position: relative; 
+   width: 50%;
+   background-color: var(--bg-color);
+   margin: 20px auto;
+   padding: 35px;
+   border: 3px solid var(--main-color);
+   border-radius: 10px ; 
+   overflow: hidden;
+   cursor: pointer;
+   transition: .5s ease;
+}
+
+.contact-area:hover {
+   transform: scale(1.1);
+}
+.contact-area::before {
+   content: ''; 
+   position: absolute;
+   top: 0 ; 
+   left: 0; 
+   width: 0; 
+   height: 100%; 
+   background: var(--second-bg-color); 
+   z-index: -1;
+   transition: .5s ease; 
+}
+
+.contact-area:hover::before {
+   width: 100%;
+}
+
+
+.form-input label {
+   color: var(--text-color);
+}
+
+.form-input  input{
+   width: 60%; 
+   height: 40px;
+   margin-bottom: 30px;
+   border: 1px solid var(--main-color);
+   border-radius: 5px;
+   background: transparent;
+   color: var(--text-color);
+}
+
+.form-input textarea {
+   width: 60% ;
+   color: var(--text-color);
+   background: transparent;
+   margin-bottom: 30px; 
+   border-radius: 5px;
+   border: 2px solid var(--main-color);
+   overflow: auto; 
+}
+
+footer {
+   border-top: 5px solid var(--main-color);  
+   background-color: var(--second-bg-color); 
+   padding-top: 50px ;
+   text-align: center; 
+}
+
+footer p {
+   color: var(--text-color); 
+   font-size: 23px; 
+}
+
+footer span {
+   color: var(--main-color);
+}
